@@ -24,6 +24,9 @@ const meta = {
       description: "아이콘 크기",
       defaultValue: "/icons/ic-cancel.svg",
     },
+    onClick: {
+      description: "아이콘 클릭 이벤트",
+    },
   },
 } satisfies Meta<typeof IconButton>;
 

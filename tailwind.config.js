@@ -9,7 +9,14 @@ export default {
       body: ["Noto Sans KR"],
     },
     fontSize: {
-      sm: ["14px", "20px"],
+      sm: [
+        "14px",
+        {
+          lineHeight: "21px",
+          letterSpacing: "0",
+          fontWeight: "400",
+        },
+      ],
       lg: ["20px", "28px"],
       "2xl": [
         "24px",
@@ -19,7 +26,7 @@ export default {
           fontWeight: "700",
         },
       ],
-      button: [
+      base: [
         "16px",
         {
           lineHeight: "24px",

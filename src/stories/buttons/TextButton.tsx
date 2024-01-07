@@ -21,7 +21,7 @@ export const TextButton = ({
 }: TextButtonProps) => {
   return (
     <button
-      className={`rounded-primary-button disabled:bg-mono100 disabled:text-mono200 text-center text-button  w-full h-[59px] ${color[theme]}`}
+      className={`rounded-primary-button disabled:bg-mono100 disabled:text-mono200 text-center text-base  w-full h-[59px] ${color[theme]}`}
       disabled={disabled}
       type="button"
       onClick={onClick}
