@@ -26,6 +26,7 @@ export default {
           fontWeight: "400",
         },
       ],
+
       lg: ["20px", "28px"],
       "2xl": [
         "24px",
