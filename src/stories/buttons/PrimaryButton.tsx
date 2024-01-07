@@ -21,7 +21,7 @@ export const PrimaryButton = ({
 }: PrimaryButtonProps) => {
   return (
     <button
-      className={`rounded-primary-button disabled:bg-mono100 disabled:text-mono200 text-center text-base  w-full h-[59px] ${color[theme]}`}
+      className={`rounded-default disabled:bg-mono100 disabled:text-mono200 text-center text-base  w-full h-[59px] ${color[theme]}`}
       disabled={disabled}
       type="button"
       onClick={onClick}
