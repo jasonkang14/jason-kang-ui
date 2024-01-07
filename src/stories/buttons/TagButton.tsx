@@ -1,15 +1,25 @@
-interface TextButtonProps {
+interface TagButtonProps {
   children: string;
+  active?: boolean;
   onClick: () => void;
 }
 
-export const TextButton = ({
-  onClick,
+const activeStyle = "text-primary border border-primary";
+const inactiveStyle = "bg-mono100 text-mono200";
 
+export const TagButton = ({
+  onClick,
+  active = false,
   children,
-}: TextButtonProps) => {
+}: TagButtonProps) => {
   return (
-    <button className="text-primary" type="button" onClick={onClick}>
+    <button
+      className={`rounded-tag-button ${
+        active ? activeStyle : inactiveStyle
+      } text-sm px-3 h-[34px]`}
+      type="button"
+      onClick={onClick}
+    >
       {children}
     </button>
   );

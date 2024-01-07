@@ -15,6 +15,11 @@ const meta = {
       description: "버튼 텍스트",
       defaultValue: "Button",
     },
+    color: {
+      control: { type: "select", options: ["primary", "secondary", "white"] },
+      description: "버튼 테마",
+      defaultValue: "primary",
+    },
   },
 } satisfies Meta<typeof TextButton>;
 

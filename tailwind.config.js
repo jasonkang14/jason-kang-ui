@@ -3,7 +3,8 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     borderRadius: {
-      "default": "5px",
+      default: "5px",
+      "tag-button": "16px",
     },
     fontFamily: {
       body: ["Noto Sans KR"],
