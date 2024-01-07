@@ -10,6 +10,7 @@ interface DefaultTextFieldProps {
   type?: "text" | "password";
   placeholder: string;
   isError?: boolean;
+  errorMessage?: string;
 }
 
 export const DefaultTextField = ({
@@ -20,6 +21,7 @@ export const DefaultTextField = ({
   type = "text",
   value = "",
   isError = false,
+  errorMessage = "다시 시도해주세요",
 }: DefaultTextFieldProps) => {
   const [isFocused, setIsFocused] = useState(false);
 
@@ -53,7 +55,7 @@ export const DefaultTextField = ({
         )}
       </div>
       {isError && (
-        <p className="text-error text-xs absolute -bottom-5">에러메세지</p>
+        <p className="text-error text-xs absolute -bottom-5">{errorMessage}</p>
       )}
     </div>
   );

@@ -1,16 +1,12 @@
 import { useState } from "react";
 import "./login.css";
 import Label from "../components/Label";
-import { PageTitle } from "../components/PageTitle";
-import { IconButton } from "../stories/buttons/IconButton";
 import { DefaultTextField } from "../stories/textfields/DefaultTextField";
-import {
-  flexColumnSpaceBetween,
-  flexRowSpaceBetweenCenter,
-} from "../styles/flex";
+import { flexColumnSpaceBetween } from "../styles/flex";
 import { fullScreen } from "../styles/screen";
 import { PrimaryButton } from "../stories/buttons/PrimaryButton";
 import useLogin from "../queries/useLogin";
+import { NavigationBar } from "../stories/navigations/NavigationBar";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -24,14 +20,12 @@ export default function LoginPage() {
       onClick={isLoginError ? () => reset() : () => {}}
     >
       <section className="login-input-section [&_label]:mb-2">
-        <div className={`mb-10 w-full ${flexRowSpaceBetweenCenter}`}>
-          <PageTitle color="primary">이메일로 로그인</PageTitle>
-          <IconButton
-            iconPath="/icons/ic-cancel.svg"
-            size="medium"
-            onClick={() => {}}
-          />
-        </div>
+        <NavigationBar
+          onBackButtonClick={() => {}}
+          onCancelButtonClick={() => {}}
+          title="로그인"
+          color="primary"
+        />
         <Label htmlFor="email">이메일</Label>
         <DefaultTextField
           id="email"
@@ -40,6 +34,7 @@ export default function LoginPage() {
           onChange={(e) => setEmail(e.target.value)}
           onIconClick={() => setEmail("")}
           isError={isLoginError}
+          errorMessage="로그인 정보를 확인해주세요."
         />
         <Label htmlFor="password">비밀번호</Label>
         <DefaultTextField
@@ -50,6 +45,7 @@ export default function LoginPage() {
           onIconClick={() => setIsPasswordVisible((prev) => !prev)}
           type={isPasswordVisible ? "text" : "password"}
           isError={isLoginError}
+          errorMessage="로그인 정보를 확인해주세요."
         />
       </section>
       <PrimaryButton

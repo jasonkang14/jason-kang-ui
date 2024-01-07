@@ -1,7 +1,7 @@
 @tailwind components;
 
 @layer components {
-  .login-input-section div:nth-child(3) {
+  .login-input-section div:nth-child(1) {
     @apply mb-8;
   }
 }
