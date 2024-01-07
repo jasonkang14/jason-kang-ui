@@ -1,9 +1,7 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import "@fontsource/noto-sans-kr/400.css";
-import "@fontsource/noto-sans-kr/500.css";
-import "@fontsource/noto-sans-kr/700.css";
+import "@fontsource/nanum-gothic";
 
 function App() {
   const [count, setCount] = useState(0);
