@@ -10,14 +10,19 @@ import {
 } from "../styles/flex";
 import { fullScreen } from "../styles/screen";
 import { TextButton } from "../stories/buttons/TextButton";
+import useLogin from "../queries/useLogin";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const { mutate: handleLogin, isError: isLoginError, reset } = useLogin();
 
   return (
-    <div className={`${fullScreen} ${flexColumnSpaceBetween}`}>
+    <div
+      className={`${fullScreen} ${flexColumnSpaceBetween}`}
+      onClick={isLoginError ? () => reset() : () => {}}
+    >
       <section className="login-input-section [&_label]:mb-2">
         <div className={`mb-10 w-full ${flexRowSpaceBetweenCenter}`}>
           <PageTitle color="primary">이메일로 로그인</PageTitle>
@@ -35,6 +40,7 @@ export default function LoginPage() {
           onChange={(e) => setEmail(e.target.value)}
           onIconClick={() => setEmail("")}
           showIcon={email.length > 0}
+          isError={isLoginError}
         />
         <Label htmlFor="password">비밀번호</Label>
         <DefaultTextField
@@ -45,9 +51,13 @@ export default function LoginPage() {
           onIconClick={() => setIsPasswordVisible((prev) => !prev)}
           showIcon={password.length > 0}
           type={isPasswordVisible ? "text" : "password"}
+          isError={isLoginError}
         />
       </section>
-      <TextButton onClick={() => {}} disabled={!password || !email}>
+      <TextButton
+        onClick={() => handleLogin({ username: email, password })}
+        disabled={!password || !email}
+      >
         로그인
       </TextButton>
     </div>

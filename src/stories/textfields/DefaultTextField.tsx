@@ -26,7 +26,7 @@ export const DefaultTextField = ({
   const [isFocused, setIsFocused] = useState(false);
 
   return (
-    <div>
+    <div className="relative">
       <div
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
@@ -54,7 +54,9 @@ export const DefaultTextField = ({
           />
         )}
       </div>
-      {isError && <div>에러메세지</div>}
+      {isError && (
+        <p className="text-error text-xs absolute -bottom-5">에러메세지</p>
+      )}
     </div>
   );
 };

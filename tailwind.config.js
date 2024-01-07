@@ -9,6 +9,14 @@ export default {
       body: ["Noto Sans KR"],
     },
     fontSize: {
+      xs: [
+        "12px",
+        {
+          lineHeight: "18px",
+          letterSpacing: "0",
+          fontWeight: "400",
+        },
+      ],
       sm: [
         "14px",
         {
