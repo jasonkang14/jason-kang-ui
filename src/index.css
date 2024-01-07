@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: "Nanum Gothic";
+@layer base {
+  html {
+    font-family: "Noto Sans KR";
+  }
 }
 
 body {

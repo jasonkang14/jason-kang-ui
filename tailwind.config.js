@@ -2,6 +2,9 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      body: ["Noto Sans KR"],
+    },
     colors: {
       primary: " #1d2745",
       secondary: " #1de5d4",
