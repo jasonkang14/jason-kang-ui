@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { TextButton } from "./TextButton";
+import { PrimaryButton } from "./PrimaryButton";
 
 const meta = {
-  title: "Buttons/TextButton",
-  component: TextButton,
+  title: "Buttons/PrimaryButton",
+  component: PrimaryButton,
   parameters: {
     layout: "centered",
   },
@@ -27,7 +27,7 @@ const meta = {
       defaultValue: "Button",
     },
   },
-} satisfies Meta<typeof TextButton>;
+} satisfies Meta<typeof PrimaryButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

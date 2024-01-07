@@ -1,7 +1,7 @@
-type TextButtonTheme = "dark" | "light" | "social";
+type PrimaryButtonTheme = "dark" | "light" | "social";
 
-interface TextButtonProps {
-  theme?: TextButtonTheme;
+interface PrimaryButtonProps {
+  theme?: PrimaryButtonTheme;
   children: string;
   disabled?: boolean;
   onClick: () => void;
@@ -11,14 +11,14 @@ const dark = "bg-primary text-white";
 const light = "bg-white text-primary";
 const social = "bg-social text-white";
 
-const color: Record<TextButtonTheme, string> = { dark, light, social };
+const color: Record<PrimaryButtonTheme, string> = { dark, light, social };
 
-export const TextButton = ({
+export const PrimaryButton = ({
   onClick,
   theme = "dark",
   disabled = false,
   children,
-}: TextButtonProps) => {
+}: PrimaryButtonProps) => {
   return (
     <button
       className={`rounded-primary-button disabled:bg-mono100 disabled:text-mono200 text-center text-base  w-full h-[59px] ${color[theme]}`}

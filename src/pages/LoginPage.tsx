@@ -9,7 +9,7 @@ import {
   flexRowSpaceBetweenCenter,
 } from "../styles/flex";
 import { fullScreen } from "../styles/screen";
-import { TextButton } from "../stories/buttons/TextButton";
+import { PrimaryButton } from "../stories/buttons/PrimaryButton";
 import useLogin from "../queries/useLogin";
 
 export default function LoginPage() {
@@ -54,12 +54,12 @@ export default function LoginPage() {
           isError={isLoginError}
         />
       </section>
-      <TextButton
+      <PrimaryButton
         onClick={() => handleLogin({ username: email, password })}
         disabled={!password || !email}
       >
         로그인
-      </TextButton>
+      </PrimaryButton>
     </div>
   );
 }
