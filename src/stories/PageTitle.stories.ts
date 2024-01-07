@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { PageTitle } from "./PageTitle";
 
 const meta = {
-  title: "Heading/PageTitle",
+  title: "PageTitle",
   component: PageTitle,
   parameters: {
     layout: "centered",

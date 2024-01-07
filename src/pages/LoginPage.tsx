@@ -1,4 +1,4 @@
-import { PageTitle } from "../stories/headers/PageTitle";
+import { PageTitle } from "../stories/PageTitle";
 
 export default function LoginPage() {
   return (
