@@ -30,13 +30,13 @@ export const Modal = ({
         {primaryButtonLabel}
       </PrimaryButton>
       {hasTextButton && (
-        <button
-          className="mt-4 text-white"
-          type="button"
-          onClick={onTextButtonClick}
+        <PrimaryButton
+          disabled={false}
+          theme="modal"
+          onClick={onTextButtonClick!}
         >
-          {textButtonLabel}
-        </button>
+          {textButtonLabel!}
+        </PrimaryButton>
       )}
     </div>
   );

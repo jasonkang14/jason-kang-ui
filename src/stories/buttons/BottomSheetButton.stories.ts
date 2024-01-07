@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { BottohSheetButton } from "./BottohSheetButton";
+import { BottomSheetButton } from "./BottomSheetButton";
 
 const meta = {
-  title: "Buttons/BottohSheetButton",
-  component: BottohSheetButton,
+  title: "Buttons/BottomSheetButton",
+  component: BottomSheetButton,
   parameters: {
     layout: "centered",
   },
@@ -21,7 +21,7 @@ const meta = {
       defaultValue: true,
     },
   },
-} satisfies Meta<typeof BottohSheetButton>;
+} satisfies Meta<typeof BottomSheetButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

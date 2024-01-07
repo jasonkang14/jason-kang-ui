@@ -1,4 +1,4 @@
-interface BottohSheetButtonProps {
+interface BottomSheetButtonProps {
   children: string;
   active?: boolean;
   onClick: () => void;
@@ -7,11 +7,11 @@ interface BottohSheetButtonProps {
 const activeStyle = "text-primary border border-primary font-bold";
 const inactiveStyle = "bg-mono100 text-mono200 font-normal";
 
-export const BottohSheetButton = ({
+export const BottomSheetButton = ({
   onClick,
   active = false,
   children,
-}: BottohSheetButtonProps) => {
+}: BottomSheetButtonProps) => {
   return (
     <button
       className={`rounded-default ${

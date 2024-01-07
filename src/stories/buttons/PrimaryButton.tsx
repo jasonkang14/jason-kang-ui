@@ -1,4 +1,4 @@
-type PrimaryButtonTheme = "dark" | "light" | "social";
+type PrimaryButtonTheme = "dark" | "light" | "social" | "modal";
 
 interface PrimaryButtonProps {
   theme?: PrimaryButtonTheme;
@@ -10,8 +10,14 @@ interface PrimaryButtonProps {
 const dark = "bg-primary text-white";
 const light = "bg-white text-primary";
 const social = "bg-social text-white";
+const modal = "text-white";
 
-const color: Record<PrimaryButtonTheme, string> = { dark, light, social };
+const color: Record<PrimaryButtonTheme, string> = {
+  dark,
+  light,
+  social,
+  modal,
+};
 
 export const PrimaryButton = ({
   onClick,

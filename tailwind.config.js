@@ -5,6 +5,7 @@ export default {
     borderRadius: {
       default: "5px",
       "tag-button": "16px",
+      "chat-text-field": "20px",
     },
     fontFamily: {
       body: ["Noto Sans KR"],
