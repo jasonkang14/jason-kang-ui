@@ -23,6 +23,7 @@
     "sort-by": "^1.2.0"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^7.6.7",
     "@storybook/addon-essentials": "^7.6.7",
     "@storybook/addon-interactions": "^7.6.7",
     "@storybook/addon-links": "^7.6.7",
