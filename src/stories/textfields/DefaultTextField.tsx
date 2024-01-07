@@ -10,7 +10,6 @@ interface DefaultTextFieldProps {
   type?: "text" | "password";
   placeholder: string;
   isError?: boolean;
-  showIcon?: boolean;
 }
 
 export const DefaultTextField = ({
@@ -21,7 +20,6 @@ export const DefaultTextField = ({
   type = "text",
   value = "",
   isError = false,
-  showIcon = false,
 }: DefaultTextFieldProps) => {
   const [isFocused, setIsFocused] = useState(false);
 
@@ -42,7 +40,7 @@ export const DefaultTextField = ({
           onChange={onChange}
           value={value}
         />
-        {showIcon && (
+        {!!value && (
           <IconButton
             iconPath={
               type === "text"

@@ -39,7 +39,6 @@ export default function LoginPage() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           onIconClick={() => setEmail("")}
-          showIcon={email.length > 0}
           isError={isLoginError}
         />
         <Label htmlFor="password">비밀번호</Label>
@@ -49,7 +48,6 @@ export default function LoginPage() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           onIconClick={() => setIsPasswordVisible((prev) => !prev)}
-          showIcon={password.length > 0}
           type={isPasswordVisible ? "text" : "password"}
           isError={isLoginError}
         />
