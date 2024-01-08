@@ -1,5 +1,5 @@
-import { IconButton } from "../buttons/IconButton";
-import { flexRowSpaceBetweenCenter } from "../../styles/flex";
+import { IconButton } from "./buttons/IconButton";
+import { flexRowSpaceBetweenCenter } from "../styles/flex";
 
 interface NavigationBarProps {
   onBackButtonClick: () => void;

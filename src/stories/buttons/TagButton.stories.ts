@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { TagButton } from "./TagButton";
+import { TagButton } from "../../components/buttons/TagButton";
 
 const meta = {
   title: "Buttons/TagButton",

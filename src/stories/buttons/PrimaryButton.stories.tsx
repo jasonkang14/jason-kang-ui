@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { PrimaryButton } from "./PrimaryButton";
+import { PrimaryButton } from "../../components/buttons/PrimaryButton";
 
 const meta = {
   title: "Buttons/PrimaryButton",
@@ -9,6 +9,13 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
+  decorators: [
+    (Story) => (
+      <div style={{ width: "320px" }}>
+        <Story />
+      </div>
+    ),
+  ],
   argTypes: {
     children: {
       control: "text",

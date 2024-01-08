@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { BottomSheetButton } from "./BottomSheetButton";
+import { BottomSheetButton } from "../../components/buttons/BottomSheetButton";
 
 const meta = {
   title: "Buttons/BottomSheetButton",
@@ -9,6 +9,13 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
+  decorators: [
+    (Story) => (
+      <div style={{ width: "160px" }}>
+        <Story />
+      </div>
+    ),
+  ],
   argTypes: {
     children: {
       control: "text",

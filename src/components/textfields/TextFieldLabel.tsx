@@ -1,9 +1,12 @@
-interface ILabelProps {
+interface ITextFieldLabelProps {
   children: string;
   htmlFor: string;
 }
 
-export default function Label({ children, htmlFor }: ILabelProps) {
+export default function TextFieldLabel({
+  children,
+  htmlFor,
+}: ITextFieldLabelProps) {
   return (
     <label className="text-sm text-primary inline-block" htmlFor={htmlFor}>
       {children}

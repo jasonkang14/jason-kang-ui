@@ -16,7 +16,7 @@ export const BottomSheetButton = ({
     <button
       className={`rounded-default ${
         active ? activeStyle : inactiveStyle
-      } text-base w-full h-[51px]`}
+      } text-base w-full py-3.5`}
       type="button"
       onClick={onClick}
     >

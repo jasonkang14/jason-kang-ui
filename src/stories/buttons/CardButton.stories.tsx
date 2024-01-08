@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { CardButton } from "./CardButton";
+import { CardButton } from "../../components/buttons/CardButton";
+
+type Story = StoryObj<typeof meta>;
 
 const meta = {
   title: "Buttons/CardButton",
@@ -8,12 +10,24 @@ const meta = {
   parameters: {
     layout: "centered",
   },
+  decorators: [
+    (Story) => (
+      <div style={{ width: "116px" }}>
+        <Story />
+      </div>
+    ),
+  ],
   tags: ["autodocs"],
   argTypes: {
     label: {
       control: "text",
       description: "버튼 텍스트",
       defaultValue: "Button",
+    },
+    iconPath: {
+      control: "text",
+      description: "카드 버튼에 보이는 아이콘",
+      defaultValue: "/icons/ic-all.svg",
     },
     active: {
       control: { type: "boolean" },
@@ -24,7 +38,6 @@ const meta = {
 } satisfies Meta<typeof CardButton>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
 
 export const ActiveButtonWithTextAndIcon: Story = {
   args: {

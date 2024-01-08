@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { NavigationBar } from "./NavigationBar";
+import { NavigationBar } from "../../components/NavigationBar";
 
 const meta = {
   title: "Navigations/NavigationBar",
@@ -9,6 +9,17 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          width: "320px",
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
   argTypes: {
     title: {
       control: "text",

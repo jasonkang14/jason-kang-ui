@@ -1,4 +1,4 @@
-import { PrimaryButton } from "../buttons/PrimaryButton";
+import { PrimaryButton } from "./buttons/PrimaryButton";
 
 interface ModalProps {
   content: string;

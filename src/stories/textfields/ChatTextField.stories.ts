@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ChatTextField } from "./ChatTextField";
+import { ChatTextField } from "../../components/textfields/ChatTextField";
 
 const meta = {
   title: "TextFields/ChatTextField",
