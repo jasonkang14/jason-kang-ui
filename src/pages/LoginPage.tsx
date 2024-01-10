@@ -15,11 +15,8 @@ export default function LoginPage() {
   const { mutate: handleLogin, isError: isLoginError, reset } = useLogin();
 
   return (
-    <div
-      className={`${fullScreen} ${flexColumnSpaceBetween}`}
-      onClick={isLoginError ? () => reset() : () => {}}
-    >
-      <section className="login-input-section [&_label]:mb-2">
+    <div className={`${fullScreen} ${flexColumnSpaceBetween}`}>
+      <section className="login-input-section [&_label]:mb-2" onClick={reset}>
         <NavigationBar
           onBackButtonClick={() => {}}
           onCancelButtonClick={() => {}}
