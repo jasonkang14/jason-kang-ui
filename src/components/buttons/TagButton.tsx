@@ -1,22 +1,31 @@
 interface TagButtonProps {
   children: string;
-  active?: boolean;
+  isActive?: boolean;
+  isDark?: boolean;
   onClick: () => void;
 }
 
-const activeStyle = "text-primary border border-primary";
-const inactiveStyle = "bg-mono100 text-mono200";
+const lightActiveStyle = "text-primary border border-primary";
+const lightInactiveStyle = "bg-mono100 text-mono200";
+const darkActiveStyle = "bg-white text-primary";
+const darkInactiveStyle = "bg-dark-inactive text-white border border-white";
 
 export const TagButton = ({
   onClick,
-  active = false,
+  isActive = false,
+  isDark = true,
   children,
 }: TagButtonProps) => {
+  let appliedStyle = "";
+  if (isDark) {
+    appliedStyle = isActive ? darkActiveStyle : darkInactiveStyle;
+  } else {
+    appliedStyle = isActive ? lightActiveStyle : lightInactiveStyle;
+  }
+
   return (
     <button
-      className={`rounded-tag-button ${
-        active ? activeStyle : inactiveStyle
-      } text-sm px-3 h-[34px]`}
+      className={`rounded-tag-button ${appliedStyle} text-sm px-3 h-[34px]`}
       type="button"
       onClick={onClick}
     >
