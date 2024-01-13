@@ -51,6 +51,7 @@ export default {
       secondary: "#1de5d4",
       tertiary: "#f52c50",
       white: "#ffffff",
+      "dark-inactive": "rgba(255, 255, 255, 0.1)",
       mono100: "#f1f1f1",
       mono200: "#bebebe",
       mono300: "#d6d7d9",
