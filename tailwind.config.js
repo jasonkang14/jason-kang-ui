@@ -4,6 +4,7 @@ export default {
   theme: {
     borderRadius: {
       default: "5px",
+      caption: "9px",
       "tag-button": "16px",
       "chat-text-field": "20px",
     },

@@ -24,7 +24,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Search: Story = {
+export const Default: Story = {
   args: {
     placeholder: "입력해주세요",
   },

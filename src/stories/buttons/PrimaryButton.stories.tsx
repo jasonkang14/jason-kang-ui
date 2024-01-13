@@ -11,7 +11,7 @@ const meta = {
   tags: ["autodocs"],
   decorators: [
     (Story) => (
-      <div style={{ width: "320px" }}>
+      <div style={{ width: "360px" }}>
         <Story />
       </div>
     ),
@@ -39,7 +39,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const ActiveDark: Story = {
+export const Default: Story = {
   args: {
     disabled: false,
     theme: "dark",

@@ -13,7 +13,7 @@ const meta = {
     (Story) => (
       <div
         style={{
-          width: "320px",
+          width: "360px",
         }}
       >
         <Story />

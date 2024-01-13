@@ -36,7 +36,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const PrimaryModal: Story = {
+export const DefaultModal: Story = {
   args: {
     content: `모달 텍스트를 입력해주세요.
     모달 텍스트를 입력해주세요. 한 줄로 길게 이어질 경우입니다.한 줄로 길게 이어질 경우입니다
@@ -46,7 +46,7 @@ export const PrimaryModal: Story = {
   },
 };
 
-export const TextModal: Story = {
+export const ModalWithTextButton: Story = {
   args: {
     content: `모달 텍스트를 입력해주세요.
     모달 텍스트를 입력해주세요. 한 줄로 길게 이어질 경우입니다.한 줄로 길게 이어질 경우입니다

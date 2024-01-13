@@ -8,6 +8,10 @@
   }
 }
 
+* {
+  box-sizing: border-box; /* Include padding and border in the element's height */
+}
+
 body {
   margin: 0;
   display: flex;
