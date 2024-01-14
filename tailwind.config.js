@@ -32,7 +32,7 @@ export default {
         },
       ],
 
-      lg: ["20px", "28px"],
+      xl: ["20px", "30px"],
       "2xl": [
         "24px",
         {
