@@ -4,7 +4,7 @@ interface IStarRatingProps {
   initialRating: number;
 }
 
-export const StarRating = ({ initialRating }: IStarRatingProps) => {
+export default function StarRating({ initialRating }: IStarRatingProps) {
   const [rating, setRating] = useState<number>(initialRating);
   const [hoverRating, setHoverRating] = useState<number>(initialRating);
 
@@ -51,6 +51,4 @@ export const StarRating = ({ initialRating }: IStarRatingProps) => {
       ))}
     </div>
   );
-};
-
-export default StarRating;
+}

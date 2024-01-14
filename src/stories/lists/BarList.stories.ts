@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
-import { BarList } from "../../components/list/BarList";
+import { BarList } from "../../components";
 
 const meta = {
   title: "Lists/BarList",

@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import { IconButton } from "../buttons/IconButton";
+import IconButton from "../buttons/IconButton";
 import { flexRowSpaceBetweenCenter } from "../../styles/flex";
 
 interface ChatTextFieldProps {
@@ -9,13 +9,12 @@ interface ChatTextFieldProps {
   type?: "text" | "password";
 }
 
-export const ChatTextField = ({
+export default function ChatTextField({
   onChange,
   onIconClick,
-
   type = "text",
   value = "",
-}: ChatTextFieldProps) => {
+}: ChatTextFieldProps) {
   const [isFocused, setIsFocused] = useState(false);
 
   return (
@@ -41,4 +40,4 @@ export const ChatTextField = ({
       />
     </div>
   );
-};
+}

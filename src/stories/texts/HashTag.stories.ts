@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { HashTag } from "../../components/texts/HashTag";
+import { HashTag } from "../../components";
 
 const meta = {
   title: "Texts/HashTag",

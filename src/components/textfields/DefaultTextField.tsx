@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import { IconButton } from "../buttons/IconButton";
+import IconButton from "../buttons/IconButton";
 import { flexRowSpaceBetweenCenter } from "../../styles/flex";
 
 interface DefaultTextFieldProps {
@@ -13,7 +13,7 @@ interface DefaultTextFieldProps {
   errorMessage?: string;
 }
 
-export const DefaultTextField = ({
+export default function DefaultTextField({
   id,
   onChange,
   onIconClick,
@@ -22,7 +22,7 @@ export const DefaultTextField = ({
   value = "",
   isError = false,
   errorMessage = "다시 시도해주세요",
-}: DefaultTextFieldProps) => {
+}: DefaultTextFieldProps) {
   const [isFocused, setIsFocused] = useState(false);
 
   return (
@@ -59,4 +59,4 @@ export const DefaultTextField = ({
       )}
     </div>
   );
-};
+}

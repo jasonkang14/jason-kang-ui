@@ -6,11 +6,11 @@ interface TextButtonProps {
   onClick: () => void;
 }
 
-export const TextButton = ({
+export default function TextButton({
   onClick,
   color = "primary",
   children,
-}: TextButtonProps) => {
+}: TextButtonProps) {
   return (
     <button
       className={`text-${color} text-base}`}
@@ -20,4 +20,4 @@ export const TextButton = ({
       {children}
     </button>
   );
-};
+}

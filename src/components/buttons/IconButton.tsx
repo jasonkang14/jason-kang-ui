@@ -16,14 +16,14 @@ const buttonSize: Record<IconButtonSize, string> = {
   large,
 };
 
-export const IconButton = ({
+export default function IconButton({
   onClick,
   size = "medium",
   iconPath,
-}: IconButtonProps) => {
+}: IconButtonProps) {
   return (
     <button className={buttonSize[size]} type="button" onClick={onClick}>
       <img src={iconPath} />
     </button>
   );
-};
+}

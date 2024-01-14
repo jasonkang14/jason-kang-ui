@@ -10,12 +10,12 @@ interface CardButtonProps {
 const activeStyle = "text-primary border border-primary font-bold";
 const inactiveStyle = "bg-mono100 text-mono200 font-normal";
 
-export const CardButton = ({
+export default function CardButton({
   onClick,
   iconPath,
   active = false,
   label = "",
-}: CardButtonProps) => {
+}: CardButtonProps) {
   return (
     <button
       className={`
@@ -31,4 +31,4 @@ export const CardButton = ({
       <p>{label}</p>
     </button>
   );
-};
+}

@@ -1,15 +1,15 @@
 import { flexRow } from "../../styles/flex";
 import { IBar } from "../../types/barTypes";
-import { Category } from "../texts/Category";
-import { Description } from "../texts/Description";
-import { HashTag } from "../texts/HashTag";
-import { Rating } from "../texts/Rating";
-import { Title } from "../texts/Title";
+import Category from "../texts/Category";
+import Description from "../texts/Description";
+import HashTag from "../texts/HashTag";
+import Rating from "../texts/Rating";
+import Title from "../texts/Title";
 import StarRating from "./StarRating";
 
 interface IBarCardProps extends IBar {}
 
-export function BarCard({
+export default function BarCard({
   imagePath,
   name,
   tags,

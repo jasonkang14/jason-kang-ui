@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { BarCard } from "../../components/utilities/BarCard";
+import { BarCard } from "../../components";
 
 const meta = {
   title: "Utilities/BarCard",

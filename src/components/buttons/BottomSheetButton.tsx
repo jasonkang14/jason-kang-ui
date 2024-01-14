@@ -7,11 +7,11 @@ interface BottomSheetButtonProps {
 const activeStyle = "text-primary border border-primary font-bold";
 const inactiveStyle = "bg-mono100 text-mono200 font-normal";
 
-export const BottomSheetButton = ({
+export default function BottomSheetButton({
   onClick,
   active = false,
   children,
-}: BottomSheetButtonProps) => {
+}: BottomSheetButtonProps) {
   return (
     <button
       className={`rounded-default ${
@@ -23,4 +23,4 @@ export const BottomSheetButton = ({
       {children}
     </button>
   );
-};
+}

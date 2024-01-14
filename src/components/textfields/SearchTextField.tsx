@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import { IconButton } from "../buttons/IconButton";
+import IconButton from "../buttons/IconButton";
 import { flexRowSpaceBetweenCenter } from "../../styles/flex";
 
 interface SearchTextFieldProps {
@@ -10,12 +10,12 @@ interface SearchTextFieldProps {
   isError?: boolean;
 }
 
-export const SearchTextField = ({
+export default function SearchTextField({
   onChange,
   onIconClick,
   placeholder,
   value = "",
-}: SearchTextFieldProps) => {
+}: SearchTextFieldProps) {
   const [isFocused, setIsFocused] = useState(false);
 
   return (
@@ -43,4 +43,4 @@ export const SearchTextField = ({
       )}
     </div>
   );
-};
+}

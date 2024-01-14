@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { StarRating } from "../../components/utilities/StarRating";
+import { StarRating } from "../../components";
 
 const meta = {
   title: "Utilities/StarRating",

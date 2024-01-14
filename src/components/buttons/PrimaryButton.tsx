@@ -19,12 +19,12 @@ const color: Record<PrimaryButtonTheme, string> = {
   modal,
 };
 
-export const PrimaryButton = ({
+export default function PrimaryButton({
   onClick,
   theme = "dark",
   disabled = false,
   children,
-}: PrimaryButtonProps) => {
+}: PrimaryButtonProps) {
   return (
     <button
       className={`rounded-default disabled:bg-mono100 disabled:text-mono200 text-center text-base  w-full h-[59px] ${color[theme]}`}
@@ -35,4 +35,4 @@ export const PrimaryButton = ({
       {children}
     </button>
   );
-};
+}

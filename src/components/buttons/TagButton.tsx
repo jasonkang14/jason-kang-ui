@@ -10,12 +10,12 @@ const lightInactiveStyle = "bg-mono100 text-mono200";
 const darkActiveStyle = "bg-white text-primary";
 const darkInactiveStyle = "bg-dark-inactive text-white border border-white";
 
-export const TagButton = ({
+export default function TagButton({
   onClick,
   isActive = false,
   isDark = true,
   children,
-}: TagButtonProps) => {
+}: TagButtonProps) {
   let appliedStyle = "";
   if (isDark) {
     appliedStyle = isActive ? darkActiveStyle : darkInactiveStyle;
@@ -32,4 +32,4 @@ export const TagButton = ({
       {children}
     </button>
   );
-};
+}

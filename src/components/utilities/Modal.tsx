@@ -1,4 +1,4 @@
-import { PrimaryButton } from "../buttons/PrimaryButton";
+import PrimaryButton from "../buttons/PrimaryButton";
 
 interface ModalProps {
   content: string;
@@ -9,14 +9,14 @@ interface ModalProps {
   onTextButtonClick?: () => void;
 }
 
-export const Modal = ({
+export default function Modal({
   content,
   primaryButtonLabel,
   hasTextButton = false,
   textButtonLabel,
   onPrimaryButtonClick,
   onTextButtonClick,
-}: ModalProps) => {
+}: ModalProps) {
   return (
     <div className="rounded-default bg-primary w-[328px] pt-6 px-4 pb-4 flex flex-col">
       <p className="text-white text-center text-sm whitespace-pre-line max-h-[120px] mb-6 overflow-y-auto">
@@ -40,4 +40,4 @@ export const Modal = ({
       )}
     </div>
   );
-};
+}

@@ -1,4 +1,4 @@
-import { IconButton } from "../buttons/IconButton";
+import IconButton from "../buttons/IconButton";
 import { flexRowSpaceBetweenCenter } from "../../styles/flex";
 
 interface NavigationBarProps {
@@ -10,14 +10,14 @@ interface NavigationBarProps {
   showCancelButton?: boolean;
 }
 
-export const NavigationBar = ({
+export default function NavigationBar({
   onBackButtonClick,
   onCancelButtonClick,
   title,
   color,
   showBackButton = false,
   showCancelButton = false,
-}: NavigationBarProps) => {
+}: NavigationBarProps) {
   return (
     <div className={`w-full ${flexRowSpaceBetweenCenter}`}>
       <section className="flex items-center">
@@ -41,4 +41,4 @@ export const NavigationBar = ({
       )}
     </div>
   );
-};
+}
