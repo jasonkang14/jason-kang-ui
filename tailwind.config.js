@@ -2,6 +2,9 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    height: {
+      text: "18px",
+    },
     borderRadius: {
       default: "5px",
       caption: "9px",
