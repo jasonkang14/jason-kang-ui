@@ -1,17 +1,18 @@
 import { useState } from "react";
 import { TagButton } from "../buttons/TagButton";
 
-type TagName = "1~2명" | "3~5명" | "6~8명" | "9~10명";
+interface ITagList<T extends string> {
+  tagList: T[];
+}
 
-export function TagList() {
-  const tagList: TagName[] = ["1~2명", "3~5명", "6~8명", "9~10명"];
-  const [selectedTag, setSelectedTag] = useState<TagName>("1~2명");
+export function TagList<T extends string>({ tagList }: ITagList<T>) {
+  const [selectedTag, setSelectedTag] = useState<T | "">("");
 
   return (
     <div className="flex gap-x-4">
-      {tagList.map((tag) => (
+      {tagList.map((tag, index) => (
         <TagButton
-          key={tag}
+          key={`tag=${index}`}
           isDark={true}
           isActive={selectedTag === tag}
           onClick={() => setSelectedTag(tag)}

@@ -4,6 +4,10 @@ export default {
   theme: {
     height: {
       text: "18px",
+      bar: "166px",
+    },
+    width: {
+      bar: "328px",
     },
     borderRadius: {
       default: "5px",

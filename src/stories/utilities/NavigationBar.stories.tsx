@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { NavigationBar } from "../../components/NavigationBar";
+import { NavigationBar } from "../../components/utilities/NavigationBar";
 
 const meta = {
-  title: "Navigations/NavigationBar",
+  title: "Utilities/NavigationBar",
   component: NavigationBar,
   parameters: {
     layout: "centered",

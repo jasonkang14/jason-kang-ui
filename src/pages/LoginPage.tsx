@@ -6,7 +6,7 @@ import { flexColumnSpaceBetween } from "../styles/flex";
 import { fullScreen } from "../styles/screen";
 import { PrimaryButton } from "../components/buttons/PrimaryButton";
 import useLogin from "../queries/useLogin";
-import { NavigationBar } from "../components/NavigationBar";
+import { NavigationBar } from "../components/utilities/NavigationBar";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
