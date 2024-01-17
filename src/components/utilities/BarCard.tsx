@@ -1,4 +1,4 @@
-import { flexRow } from "../../styles/flex";
+import { flexColumn, flexRow } from "../../styles/flex";
 import { IBar } from "../../types/barTypes";
 import Category from "../texts/Category";
 import Description from "../texts/Description";
@@ -20,7 +20,7 @@ export default function BarCard({
   const barCardFlex = `${flexRow} items-center gap-x-2`;
 
   return (
-    <div className="flex flex-col">
+    <div className={flexColumn}>
       <img src={imagePath} className="w-bar h-bar mb-4" alt={name} />
       <div className={`${barCardFlex} mb-2`}>
         <Category>{category}</Category>

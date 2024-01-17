@@ -1,4 +1,6 @@
 {
+  "author": "Jason Kang",
+  "description": "Design System with Storybook",
   "name": "design-system-with-storybook",
   "private": true,
   "version": "0.0.0",
@@ -12,6 +14,15 @@
     "build-storybook": "storybook build",
     "chromatic": "chromatic --exit-zero-on-changes"
   },
+  "main": "src/components/index.js",
+  "keywords": [
+    "react",
+    "storybook",
+    "typescript",
+    "vite",
+    "tailwindcss",
+    "design-system"
+  ],
   "dependencies": {
     "@fontsource/noto-sans-kr": "^5.0.17",
     "@tanstack/react-query": "^5.17.8",
