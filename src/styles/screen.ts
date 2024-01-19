@@ -1,1 +1,1 @@
-export const fullScreen = "w-screen h-screen pt-10 px-4 pb-4";
+export const fullScreen = "w-screen h-lvh pt-10 px-4 pb-4";

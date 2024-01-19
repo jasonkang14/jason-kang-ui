@@ -1,20 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    height: {
-      text: "18px",
-      bar: "166px",
+    extend: {
+      height: {
+        text: "18px",
+        bar: "166px",
+      },
+      width: {
+        bar: "328px",
+      },
+      borderRadius: {
+        default: "5px",
+        caption: "9px",
+        "tag-button": "16px",
+        "chat-text-field": "20px",
+      },
     },
-    width: {
-      bar: "328px",
-    },
-    borderRadius: {
-      default: "5px",
-      caption: "9px",
-      "tag-button": "16px",
-      "chat-text-field": "20px",
-    },
+
     fontFamily: {
       body: ["Noto Sans KR"],
     },

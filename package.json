@@ -2,9 +2,17 @@
   "author": "Jason Kang",
   "description": "Design System with Storybook",
   "name": "design-system-with-storybook",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.5",
   "type": "module",
+  "files": [
+    "dist/",
+    "src/components/",
+    "src/assets/",
+    "src/styles/",
+    "public/icons/",
+    "README.md"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -12,9 +20,14 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "chromatic --exit-zero-on-changes"
+    "chromatic": "chromatic --exit-zero-on-changes",
+    "build:css": "tailwindcss build src/index.css -o dist/index.css",
+    "publish": "npm publish --access public"
   },
-  "main": "src/components/index.js",
+  "publishConfig": {
+    "access": "public"
+  },  
+  "main": "src/components/index.tsx",
   "keywords": [
     "react",
     "storybook",

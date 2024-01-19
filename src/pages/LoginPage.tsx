@@ -1,12 +1,11 @@
 import { useState } from "react";
 import "./login.css";
 import Label from "../components/textfields/TextFieldLabel";
-import { DefaultTextField } from "../components/textfields/DefaultTextField";
+import { DefaultTextField, PrimaryButton, NavigationBar } from "../components";
 import { flexColumnSpaceBetween } from "../styles/flex";
 import { fullScreen } from "../styles/screen";
-import { PrimaryButton } from "../components/buttons/PrimaryButton";
+
 import useLogin from "../queries/useLogin";
-import { NavigationBar } from "../components/utilities/NavigationBar";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
