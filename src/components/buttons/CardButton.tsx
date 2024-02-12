@@ -23,7 +23,7 @@ export default function CardButton({
       ${flexColumn}
       rounded-default ${
         active ? activeStyle : inactiveStyle
-      } text-base w-full py-4`}
+      } text-base w-full py-8`}
       type="button"
       onClick={onClick}
     >
