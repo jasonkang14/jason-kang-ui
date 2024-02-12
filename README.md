@@ -18,6 +18,31 @@ After installation, you must import the main CSS file in your project to access 
 import 'jason-kang-ui/index.css';
 ```
 
+And then you can import components from `jason-kang-ui` directly like below
+
+```typescript
+import { DefaultTextField, PrimaryButton } from "jason-kang-ui";
+
+export default function LoginPage() {
+  return (
+    ...
+      <DefaultTextField
+        id="username"
+        placeholder="아이디를 입력해주세요"
+        onChange={handleUsernameChange}
+      />
+      <DefaultTextField
+        id="password"
+        type="password"
+        placeholder="비밀번호를를 입력해주세요"
+        onChange={handlePasswordChange}
+      />
+      <PrimaryButton onClick={() => handleLogin(username, password)}>로그인</PrimaryButton>
+    ...
+  );
+}
+```
+
 This ensures that all Jason-Kang-UI components render with the intended design specifications.
 
 ## Components
@@ -25,3 +50,7 @@ Jason-Kang-UI offers a wide range of components that are ready to use in your pr
 
 ## Contributing
 We welcome contributions to the Jason-Kang-UI project! If you have suggestions for improvements or encounter any issues, please feel free to open an issue or submit a pull request.
+
+## License
+Jason-Kang-UI is released under the MIT License. See the LICENSE file for more details.
+
