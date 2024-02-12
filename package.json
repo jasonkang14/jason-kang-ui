@@ -1,17 +1,16 @@
 {
   "author": "Jason Kang",
   "description": "Design System with Storybook",
-  "name": "design-system-with-storybook",
+  "name": "jason-kang-ui",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.1",
   "type": "module",
+  "license": "MIT",
   "files": [
-    "dist/",
+    "index.css",
     "src/components/",
-    "src/assets/",
     "src/styles/",
-    "public/icons/",
-    "README.md"
+    "public/icons/"
   ],
   "scripts": {
     "dev": "vite",
@@ -21,8 +20,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "chromatic --exit-zero-on-changes",
-    "build:css": "tailwindcss build src/index.css -o dist/index.css",
-    "publish": "npm publish --access public"
+    "build:css": "tailwindcss build src/index.css -o index.css",
+    "release": "npm run build:css && npm publish --access public"
   },
   "publishConfig": {
     "access": "public"
