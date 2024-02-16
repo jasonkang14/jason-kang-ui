@@ -39,7 +39,14 @@ export default {
           fontWeight: "400",
         },
       ],
-
+      base: [
+        "16px",
+        {
+          lineHeight: "24px",
+          letterSpacing: "0",
+          fontWeight: "400",
+        },
+      ],
       xl: ["20px", "30px"],
       "2xl": [
         "24px",
@@ -49,21 +56,12 @@ export default {
           fontWeight: "700",
         },
       ],
-      base: [
-        "16px",
-        {
-          lineHeight: "24px",
-          letterSpacing: "0",
-          fontWeight: "400",
-        },
-      ],
     },
     colors: {
       primary: "#1d2745",
       secondary: "#1de5d4",
       tertiary: "#f52c50",
       white: "#ffffff",
-      "dark-inactive": "rgba(255, 255, 255, 0.1)",
       mono100: "#f1f1f1",
       mono200: "#bebebe",
       mono300: "#d6d7d9",

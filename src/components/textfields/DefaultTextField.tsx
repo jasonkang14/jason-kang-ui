@@ -8,6 +8,7 @@ interface DefaultTextFieldProps {
   value?: string;
   onIconClick: () => void;
   type?: "text" | "password";
+  hasIcon?: boolean;
   placeholder: string;
   isError?: boolean;
   errorMessage?: string;
@@ -20,6 +21,7 @@ export default function DefaultTextField({
   placeholder,
   type = "text",
   value = "",
+  hasIcon = true,
   isError = false,
   errorMessage = "다시 시도해주세요",
 }: DefaultTextFieldProps) {
@@ -42,7 +44,7 @@ export default function DefaultTextField({
           onChange={onChange}
           value={value}
         />
-        {!!value && (
+        {!!value && hasIcon && (
           <IconButton
             iconPath={
               type === "text"

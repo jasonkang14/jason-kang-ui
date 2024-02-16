@@ -26,6 +26,11 @@ const meta = {
     onIconClick: {
       description: "아이콘 버튼 클릭 이벤트",
     },
+    hasIcon: {
+      description: "아이콘 버튼의 유무",
+      defaultValue: true,
+      control: "boolean",
+    },
   },
 } satisfies Meta<typeof DefaultTextField>;
 
