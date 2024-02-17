@@ -2,7 +2,7 @@ interface TagButtonProps {
   children: string;
   isActive?: boolean;
   isDark?: boolean;
-  onClick: () => void;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const lightActiveStyle = "text-primary border border-primary";
