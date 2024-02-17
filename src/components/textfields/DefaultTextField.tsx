@@ -1,5 +1,6 @@
 import { ChangeEvent, useState } from "react";
 import IconButton from "../buttons/IconButton";
+import ErrorMessage from "../texts/ErrorMessage";
 import { flexRowSpaceBetweenCenter } from "../../styles/flex";
 
 interface DefaultTextFieldProps {
@@ -56,9 +57,7 @@ export default function DefaultTextField({
           />
         )}
       </div>
-      {isError && (
-        <p className="text-error text-xs absolute -bottom-5">{errorMessage}</p>
-      )}
+      {isError && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </div>
   );
 }

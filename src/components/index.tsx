@@ -23,6 +23,7 @@ export { default as Description } from "./texts/Description";
 export { default as HashTag } from "./texts/HashTag";
 export { default as Rating } from "./texts/Rating";
 export { default as Title } from "./texts/Title";
+export { default as ErrorMessage } from "./texts/ErrorMessage";
 
 // utilities
 export { default as BarCard } from "./utilities/BarCard";
