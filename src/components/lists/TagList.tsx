@@ -23,8 +23,7 @@ export default function TagList<T extends string>({
       {tagList.map((tag, index) => (
         <TagButton
           key={`tag=${index}`}
-          isDark={true}
-          isActive={selectedTag === tag}
+          isChecked={selectedTag === tag}
           onClick={() => setSelectedTag(tag)}
         >
           {tag}

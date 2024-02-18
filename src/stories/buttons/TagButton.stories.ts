@@ -15,7 +15,7 @@ const meta = {
       description: "버튼 텍스트",
       defaultValue: "Button",
     },
-    isActive: {
+    isChecked: {
       control: { type: "boolean" },
       description: "버튼의 옵션이 선택되었는지 여부",
       defaultValue: true,
@@ -29,13 +29,13 @@ type Story = StoryObj<typeof meta>;
 export const ActiveButton: Story = {
   args: {
     children: "Button",
-    isActive: true,
+    isChecked: true,
   },
 };
 
 export const InactiveButton: Story = {
   args: {
     children: "Button",
-    isActive: false,
+    isChecked: false,
   },
 };
