@@ -25,7 +25,7 @@
   },
   "publishConfig": {
     "access": "public"
-  },  
+  },
   "main": "src/components/index.tsx",
   "keywords": [
     "react",
@@ -50,7 +50,7 @@
   "devDependencies": {
     "@storybook/addon-a11y": "^7.6.7",
     "@storybook/addon-essentials": "^7.6.7",
-    "@storybook/addon-interactions": "^7.6.8",
+    "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.7",
     "@storybook/addon-onboarding": "^1.0.10",
     "@storybook/blocks": "^7.6.7",

@@ -17,8 +17,9 @@ export default function StarRating({ initialRating }: IStarRatingProps) {
     setHoverRating(0);
   };
 
-  const handleMouseClick = () => {
-    setRating(hoverRating);
+  const handleMouseClick = (index: number, isLeftHalf: boolean) => {
+    const newRating = isLeftHalf ? index + 0.5 : index + 1;
+    setRating(newRating);
   };
 
   const getImageSrc = (index: number) => {
@@ -32,13 +33,18 @@ export default function StarRating({ initialRating }: IStarRatingProps) {
   };
 
   return (
-    <div onClick={handleMouseClick}>
+    <div className="flex gap-x-1">
       {Array.from({ length: 5 }, (_, index) => (
         <button key={index} style={{ display: "inline-block" }}>
           <img
             className="min-h-3 min-w-3 cursor-pointer"
             src={getImageSrc(index)}
-            onMouseOver={() => handleMouseOver(index, true)}
+            onClick={(e) => {
+              const rect = e.currentTarget.getBoundingClientRect();
+              const isLeftHalf = e.clientX - rect.left < rect.width / 2;
+              handleMouseClick(index, isLeftHalf);
+            }}
+            // onMouseOver={() => handleMouseOver(index, true)}
             onMouseMove={(e) => {
               const rect = e.currentTarget.getBoundingClientRect();
               const isLeftHalf = e.clientX - rect.left < rect.width / 2;
